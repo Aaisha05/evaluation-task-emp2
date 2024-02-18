@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './form.css'
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -53,19 +54,19 @@ function Form() {
     
     <div>
       <h1 className='font-semibold text-3xl text-center mt-10 mb-6'>Employee Management Form</h1>
-      <div className="flex justify-center">
-        <form onSubmit={handleSubmit} className="max-w-3xl mx-auto rounded-lg px-10 py-8 bg-white mt-3 border border-gray-300">
+      <div className="flex justify-center px-60">
+        <form onSubmit={handleSubmit} className="w-full mx-auto rounded-lg px-10 py-8 bg-white mt-3 border border-gray-300">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 ">
-            <div className="mb-4">
-              <label htmlFor="employeeName" className="block mb-2">Employee Name:</label>
+            <div className="mb-1">
+              <label htmlFor="employeeName" className="block mb-3">Employee Name:</label>
               <input type="text" id="employeeName" name="employeeName" value={formData.employeeName} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
             </div>
-            <div className="mb-4">
-              <label htmlFor="employeeId" className="block mb-2">Employee ID:</label>
+            <div className="mb-1">
+              <label htmlFor="employeeId" className="block mb-3">Employee ID:</label>
               <input type="text" id="employeeId" name="employeeId" value={formData.employeeId} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
             </div>
-            <div className="mb-4">
-              <label htmlFor="department" className="block mb-2">Department:</label>
+            <div className="mb-1">
+              <label htmlFor="department" className="block mb-3">Department:</label>
               <select id="department" name="department" value={formData.department} onChange={handleChange} className="w-full px-3 py-2 border rounded-md">
                 <option value="">Select Department</option>
                 <option value="HR">HR</option>
@@ -73,12 +74,12 @@ function Form() {
                 <option value="IT">IT</option>
               </select>
             </div>
-            <div className="mb-4">
-              <label htmlFor="dob" className="block mb-2">Date of Birth:</label>
+            <div className="mb-1">
+              <label htmlFor="dob" className="block mb-3">Date of Birth:</label>
               <input type="date" id="dob" name="dob" value={formData.dob} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
             </div>
-            <div className="mb-4">
-              <label className="block mb-2">Gender:</label>
+            <div className="mb-1">
+              <label className="block mb-3">Gender:</label>
               <div>
                 <label htmlFor="male" className="mr-4">
                   <input type="radio" id="male" name="gender" value="Male" onChange={handleChange} /> Male
@@ -91,16 +92,16 @@ function Form() {
                 </label>
               </div>
             </div>
-            <div className="mb-4">
-              <label htmlFor="designation" className="block mb-2">Designation:</label>
+            <div className="mb-1">
+              <label htmlFor="designation" className="block mb-3">Designation:</label>
               <input type="text" id="designation" name="designation" value={formData.designation} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
             </div>
             <div className="mb-10">
-              <label htmlFor="salary" className="block mb-2">Salary:</label>
+              <label htmlFor="salary" className="block mb-3">Salary:</label>
               <input type="text" id="salary" name="salary" value={formData.salary} onChange={handleChange} className="w-full px-3 py-2 border rounded-md" />
             </div>
           </div>
-          <button type="submit" className="bg-blue-500 text-white px-12 py-2 rounded-sm hover:bg-blue-600 mx-auto block">Submit</button>
+          <button type="submit" className="bg-blue-600 text-white px-20 py-3 rounded-sm hover:bg-blue-600 mx-auto block">Submit</button>
         </form>
       </div>
     </div>
